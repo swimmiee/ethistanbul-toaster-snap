@@ -5,9 +5,9 @@ const config: GatsbyConfig = {
   jsxRuntime: 'automatic',
 
   plugins: [
-    'gatsby-plugin-postcss',
     'gatsby-plugin-svgr',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

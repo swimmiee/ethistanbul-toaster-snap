@@ -24,7 +24,8 @@
     "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write",
     "lint:misc": "prettier '**/*.json' '**/*.md' '!**/CHANGELOG.md' '**/*.yml' --ignore-path .gitignore",
     "start": "yarn workspaces foreach --parallel --interlaced --verbose run start",
-    "test": "yarn workspace snap run test"
+    "test": "yarn workspace snap run test",
+    "typechain": "typechain --target ethers-v6 --out-dir packages/site/src/typechain packages/abi/**/*.json"
   },
   "devDependencies": {
     "@lavamoat/allow-scripts": "^3.0.0",
@@ -57,5 +58,10 @@
       "@lavamoat/preinstall-always-fail": false,
       "sharp": true
     }
+  },
+  "dependencies": {
+    "@typechain/ethers-v6": "^0.5.1",
+    "ethers": "^6.8.1",
+    "typechain": "^8.3.2"
   }
 }

@@ -18,6 +18,7 @@ export const use1InchSdk = () => {
       url: 'https://fusion.1inch.io',
       network: NetworkEnum.ARBITRUM,
       blockchainProvider: new Web3ProviderConnector(
+        // @ts-ignore
         new BrowserProvider(client.transport, {
           chainId: client.chain.id,
           name: client.chain.name,

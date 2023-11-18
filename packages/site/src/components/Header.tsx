@@ -6,6 +6,7 @@ import { connectSnap, getThemePreference, getSnap } from '../utils';
 import { HeaderButtons } from './Buttons';
 import { SnapLogo } from './SnapLogo';
 import { Toggle } from './Toggle';
+import { ConnectKitButton } from 'connectkit';
 
 const HeaderWrapper = styled.header`
   display: flex;
@@ -64,7 +65,7 @@ export const Header = ({
     <HeaderWrapper>
       <LogoWrapper>
         <SnapLogo color={theme.colors.icon?.default} size={36} />
-        <Title>template-snap</Title>
+        <Title>Toaster UniswapV3 position manager</Title>
       </LogoWrapper>
       <RightContainer>
         <Toggle
@@ -72,6 +73,8 @@ export const Header = ({
           defaultChecked={getThemePreference()}
         />
         <HeaderButtons state={state} onConnectClick={handleConnectClick} />
+
+        <ConnectKitButton />
       </RightContainer>
     </HeaderWrapper>
   );
